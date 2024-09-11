@@ -1,0 +1,29 @@
+<script>
+  const circle1 = {
+    x: 10,
+    y: 10,
+    radius: 300
+  };
+
+  const circle2 = {
+    x: 500,
+    y: 500,
+    radius: 120
+  };
+  //per conoscere la distanza dei nostri 2 oggetti, immaginiamo che siano uniti da un ipotetica ipotenusa che termina al centro dei 2 cerchi
+  let distanceX = circle2.x - circle1.x;
+  let distanceY = circle2.y - circle1.y;
+  //usiamo il teorema di pitagora per scoprire la lunghezza dell'ipotenusa
+  let distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+  let sumOfRadii = circle1.radius + circle2.radius;
+  if (distance === sumOfRadii) {
+    console.log('collision are true');
+    
+  } else if (distance > sumOfRadii) {
+    console.log('collision are false');
+    
+  } else {
+    console.log('over is true');
+    
+  }
+</script>
